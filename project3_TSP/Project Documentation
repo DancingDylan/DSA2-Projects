@@ -1,0 +1,81 @@
+<title>
+Project 3 Documentation of Experimentation
+</title>
+
+<header>
+Dylan Hall
+Nathan Cooper
+4/12/2016
+</header>
+
+<body>
+	-tspBruteForce-
+	A Brute Force approach for solving the TSP problem. This problem entails determining a number of cities,
+	implemented within a graph all with their allocated costs to travel between them. A Brute Force creates as many 
+	possible permutations of routes as possible for a given number of cities. Then, goes on to test every single 
+	permutation until the most optimal route has been determined. Hence the name, "Brute Force."
+	
+	Test #:   |   1            |   2            |   3            |   4            |   5            |	6			|
+	__________|________________|________________|________________|________________|________________|________________|
+	          |                |                |                |                |                |                |
+	Number	  |                |                |                |                |                |                |
+	  of	  |     10         |       11       |     12         |     13         |     14         |     15         |
+	Cities	  |                |                |                |                |                |                |
+	__________|________________|________________|________________|________________|________________|________________|
+	          |                |                |                |                |                | Ended the test |
+	Total     |  No time could | Roughly  74    |  Roughly 187   |306 Seconds and |   Upwards of   |  Upwards of    |
+	  Time    |  be recorded   | Milli-Seconds  |  Milli-Seconds |890 Milli-Second|  760+ seconds  | 43+ minutes    |
+	__________|________________|________________|________________|________________|________________|________________|
+	
+		-tspGenetic-
+	A Heuristic approach at solving the TSP problem. This approach replicates the mutation and splicing of 
+	DNA within nature throughout evolution. Taking in a certain number of permutations of cities, and randomly 
+	splicing or mutating routes together to create "offspring," in which the weakest of the routes gets replaced
+	with. Eventually determining the most optimal route based off a few stop conditions, i.e.
+	The supplied number of generations was achieved, the mutations of routes all have very similar costs with
+	very little change between offspring and/or a typical "most optimal" route has been achieved early. For
+	this program, the most optimal cost is set to 4, then multiplied by the number of cities. Replicating
+	a steady increment in cost the larger the number of cities is. 
+	
+	This simple operation was determined by experimentation and conclusions after testing these values
+	before documentation. For the most cities used, the "Most optimal route" would be 4 * 15 equalling 60.
+	
+	When running the test, the most common optimal route for 15 cities was chosen to be roughly between 45-60. 
+	for Test 5, several tests determined the optimal cost around 56. 
+	
+	Test #:   |   1            |   2            |   3            |   4            |   5            |
+	__________|________________|________________|________________|________________|________________|
+	    	  |                |                |                |                |                |
+	Number	  |                |                |                |                |                |
+	  of	  |     3          |      6         |     9          |     12         |     15         |
+	Cities	  |                |                |                |                |                |
+	__________|________________|________________|________________|________________|________________|	
+	          |                |                |                |                |                |
+	Total     |     6          |      9         |     12         |     15         |     18         | 
+	  Tours   |                |                |                |                |                |
+	__________|________________|________________|________________|________________|________________|
+	          |                |                |                |                |                |
+	Total	  |                |                |                |                |                |
+  Generations |     10         |      15        |     20         |     25         |     30         |
+	__________|________________|________________|________________|________________|________________|	
+              |                |                |                |                |                |
+	Percentage|   20% - .2     |   40% - .4     |   60% - .6     |   80% - .8     |   100% - 1     |
+	__________|________________|________________|________________|________________|________________|	
+	          |                |                |                |                |                |
+	Total     |  No time could | Roughly  23    |  Roughly 37    |   Roughly 46   |   Roughly 68   | 
+	  Time    |  be recorded   | Milli-Seconds  |  Milli-Seconds |   Milli-Seconds|   Milli-Seconds|
+	__________|________________|________________|________________|________________|________________|
+	
+	
+	
+	Summation;
+	
+	Through these experiments one can easily tell the Brute Force approach to solving the TSP is mighty fast 
+	when it comes to very few cities. Yet, once the algorithm hits anything upwards of 10 cities (nodes) to 
+	test through the time taken is increasing exponentially. Once we hit the max number of cities used within
+	this project, 15, the time took over 40 minutes to determine a optimal route. Through these experiments though,
+	it is clear the Heuristic approach to solving the TSP problem is much more well-rounded. All tests ran through 
+	a genetic algorithm took hardly any time, even for upwards of 10 cities. Very minimal increase in time taken
+	to solve the problem. No attempts surpassing even a second.
+	          
+	</body>

@@ -1,0 +1,121 @@
+This file holds the simulation results for both the Off/Online approaches to solving the bin-packing problem.
+
+
+-Unordered-
+Box Collection:
+Key: 1      Size: 28
+Key: 2      Size: 12
+Key: 3      Size: 10
+Key: 4      Size: 12
+Key: 5      Size: 18
+Key: 6      Size:  1
+Key: 7      Size: 109
+Key: 8      Size: 24
+Key: 9      Size: 12
+Key: 10     Size: 109
+Key: 11     Size: 27
+Key: 12     Size: 37
+Key: 13     Size: 48
+Key: 14     Size: 92
+Key: 15     Size: 10
+Key: 16     Size: 17
+Key: 17     Size: 72
+Key: 18     Size: 32
+
+
+___________________________________________________________________________________________________________________________
+
+Simulation results for Online First Fit approach:
+
+Bin   0:       1       2       3       4       5       6       8       0       0       0  Currently Holding: 105   
+Bin   1:       9      11      12      15      16       0       0       0       0       0  Currently Holding: 103   
+Bin   2:      13      18       0       0       0       0       0       0       0       0  Currently Holding: 80   
+Bin   3:      14       0       0       0       0       0       0       0       0       0  Currently Holding: 92   
+Bin   4:      17       0       0       0       0       0       0       0       0       0  Currently Holding: 72   
+Number of used bins: 5
+
+
+___________________________________________________________________________________________________________________________
+
+Simulation results for Online Best Fit approach:
+
+Bin   0:       1       2       3       4       5       6       8       0       0       0  Currently Holding: 105   
+Bin   1:       9      11      12      16       0       0       0       0       0       0  Currently Holding: 93   
+Bin   2:      13       0       0       0       0       0       0       0       0       0  Currently Holding: 48   
+Bin   3:      14      15       0       0       0       0       0       0       0       0  Currently Holding: 102   
+Bin   4:      17      18       0       0       0       0       0       0       0       0  Currently Holding: 104   
+Number of used bins: 5
+
+
+___________________________________________________________________________________________________________________________
+
+Simulation results for Online Next Fit approach:
+
+Bin   0:       1       2       3       4       5       6       8       0       0       0  Currently Holding: 105   
+Bin   1:       9      11      12       0       0       0       0       0       0       0  Currently Holding: 76   
+Bin   2:      13       0       0       0       0       0       0       0       0       0  Currently Holding: 48   
+Bin   3:      14      15       0       0       0       0       0       0       0       0  Currently Holding: 102   
+Bin   4:      16      17       0       0       0       0       0       0       0       0  Currently Holding: 89   
+Bin   5:      18       0       0       0       0       0       0       0       0       0  Currently Holding: 32   
+Number of used bins: 6
+
+
+-Descending Order-
+Box Collection:
+Key: 7      Size: 109
+Key: 10     Size: 109
+Key: 14     Size: 92
+Key: 17     Size: 72
+Key: 13     Size: 48
+Key: 12     Size: 37
+Key: 18     Size: 32
+Key: 1      Size: 28
+Key: 11     Size: 27
+Key: 8      Size: 24
+Key: 5      Size: 18
+Key: 16     Size: 17
+Key: 9      Size: 12
+Key: 4      Size: 12
+Key: 2      Size: 12
+Key: 15     Size: 10
+Key: 3      Size: 10
+Key: 6      Size:  1
+
+
+
+
+___________________________________________________________________________________________________________________________
+
+Simulation results for Offline First Fit approach:
+
+Bin   0:      14       9       6       0       0       0       0       0       0       0  Currently Holding: 105   
+Bin   1:      17      18       0       0       0       0       0       0       0       0  Currently Holding: 104   
+Bin   2:      13      12       5       0       0       0       0       0       0       0  Currently Holding: 103   
+Bin   3:       1      11       8      16       4       0       0       0       0       0  Currently Holding: 108   
+Bin   4:       2      15       3       0       0       0       0       0       0       0  Currently Holding: 32   
+Number of used bins: 5
+
+
+___________________________________________________________________________________________________________________________
+
+Simulation results for Offline Best Fit approach:
+
+Bin   0:      14       4       6       0       0       0       0       0       0       0  Currently Holding: 105   
+Bin   1:      17      18       0       0       0       0       0       0       0       0  Currently Holding: 104   
+Bin   2:      13      12       5       0       0       0       0       0       0       0  Currently Holding: 103   
+Bin   3:       1      11       8      16       9       0       0       0       0       0  Currently Holding: 108   
+Bin   4:       2      15       3       0       0       0       0       0       0       0  Currently Holding: 32   
+Number of used bins: 5
+
+
+___________________________________________________________________________________________________________________________
+
+Simulation results for Offline Next Fit approach:
+
+Bin   0:      14       0       0       0       0       0       0       0       0       0  Currently Holding: 92   
+Bin   1:      17       0       0       0       0       0       0       0       0       0  Currently Holding: 72   
+Bin   2:      13      12       0       0       0       0       0       0       0       0  Currently Holding: 85   
+Bin   3:      18       1      11       0       0       0       0       0       0       0  Currently Holding: 87   
+Bin   4:       8       5      16       9       4       2      15       0       0       0  Currently Holding: 105   
+Bin   5:       3       6       0       0       0       0       0       0       0       0  Currently Holding: 11   
+Number of used bins: 6

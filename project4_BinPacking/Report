@@ -1,0 +1,101 @@
+<title>
+Project 4 Report and Justification/Illustration 
+</title>
+
+<header>
+Dylan Hall
+Nathan Cooper
+4/12/2016
+</header>
+
+<body>
+		*Bin-Packing Problem*
+		The bin-packing problem is a problem very relatable to the traveling salesman problem. In which a heurisitc approach is taken
+		in solving a series of problems. In this problem, the simulation is given a randomly generated data which takes the place of
+		bins and boxes; each with their own generated populas and sizes. Once the data as been read into memory the algorithms are put
+		into effect, and the simulation proceeds to finish. There are two associated approaches, with three styles of solving.
+		
+		
+		-Online-
+		Online bin-packing is an approach at solving the bin-packing problem. This approach takes in the bin and box data and solves the
+		problem. Yet, the boxes are handled "as they come." i.e. The boxes are not "determinable," or that they cannot be modified, the 
+		algorithms must take them as they get them with no pre-existent knowledge of their sizes. This entails a first come fist serve
+		style of handling the problem. This will create a semi-optimal solution to the problem, obviously increasing in efficiency if
+		the boxes are to be sorted, as in the Offline Approach.
+		
+	
+		-Offline-
+		Offline bin-packing is an approach at solving the bin-packing problem. This approach takes in the bin and the box data and solves the
+		problem. Yet, the boxes can be pre-existent, or "known," before handling. This means the box population can be sorted and modified, as
+		long as the details of each box remains intact. This entails a reservation style of handling the problem. In that, the algorithms know
+		about all of the boxes and their details before solving the problem. This will create the most optimal solution to the problem.
+		
+		
+			i). First Fit: The first fit solution determines the first bin in the collection in which a box can fit into, and then places it within.
+			
+			ii). Best Fit: The best fit solution determines the best bin in the collection in which a box can fit into, making sure to be as efficient 
+			with space as possible.
+			
+			iii). Next Fit: **** TODO *****
+	
+	
+	ADT Justification:
+	Within solving this problem, it was clear that two collections would be needed. So, two collections were made one in which will hold the bins, the 
+	other to hold the boxes. Also, two ADT's were created that would take the place of individual box and bin nodes within these collections in memory.
+	
+		Bin Collection: this collection has within it, the number of bins and the size of bins. The size of bins was not distributed to all bin nodes
+		because this problem entails that all bins have the same sizes. This saves on space usage, in that we do not need to call a bin node to check
+		its size. 
+		
+		Box Collection: this collection has within it, the number of boxes and the number of unused boxes (may be removed). The unused boxes variable
+		allows for a quick check in efficiency at the end of each simulation to determine how many boxes counldn't find a fit.
+		
+		Bin Nodes: each bin node in a collection has three variables, the bin capacity, the number of boxes within it, and the box key it holds.
+		The bin capacity is a must have for this simulation because the algorithms have a guide to when a box is full or it can hold more boxes.
+		The number of boxes within a bin is, **** TODO *****
+		The specific box keys a bin has within it allows for ease of printing to a file or to screen, the bin collection and the boxes within it.
+		Also, if we extended the simulation and allowed the use of new oncoming or outgoing boxes, this would allow ease of searching and removing
+		boxes.
+		
+		Box Node: each box node in a collection has three variables, the box key, the box size, and if its in a bin. The box key is a specific key for 
+		a box, this is more useful for the offline approach in which the collection of boxes gets sorted and therefore the keys will be swapped around.
+		It also allows for bins to also hold specific box keys, so one can determine which box is in which bin. The box size is obviously a must, for, 
+		each box has its own size and is an important part of the simulation, without it, nothing would get done. Also, the inBin variable used is very 
+		useful for recursion and placing boxes in bins. This way, during the looping or recursive steps no box will be doubly placed. There is always a
+		check to see if the current box being placed is already within a bin.
+		
+		Illustration:
+		
+		-Bins-
+		numBins: 5
+		binSize: 10
+		
+Index:	0	size: 10     1  size: 10      2  size: 10      3  size: 10      4
+		|----------------|----------------|----------------|----------------|----------------|
+		|binCapacity: 10 |binCapacity:  9 |binCapacity: 7  |binCapacity: 10 |binCapacity:  4 |
+		|numBoxesInBin:4 |numBoxesInBin:3 |numBoxesInBin:2 |numBoxesInBin:1 |numBoxesInBin:3 |
+		|hasBoxKey[10]   |hasBoxKey[10]   |hasBoxKey[10]   | hasBoxKey[10]  |hasBoxKey[10]   |
+   		|{0, 1, 2, 3}    |{6, 7, 8}       |{9, 10}         |{11}            |{12, 14, 15}    |   
+		|----------------|----------------|----------------|----------------|----------------|
+		
+		-Boxes-
+		numBoxes: 16
+		unUsedBoxes: 3
+		
+Index:	0		 1		  2		   3	    4 		 5		  6		   7		8		 9		  10	   11		12		 13		  14	   15
+		|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+		|Key: 0  |Key: 1  |Key: 2  |Key: 3  |Key: 4  |Key: 5  |Key: 6  |Key: 7  |Key: 8  |Key: 9  |Key: 10 |Key: 11 |Key: 12 |Key: 13 |Key: 14 |Key: 15 |
+		|Size: 3 |Size: 3 |Size: 2 |Size: 2 |Size: 11|Size: 15|Size: 3 |Size: 2 |Size: 4 |Size: 5 |Size: 2 |Size: 10|Size: 2 |Size: 9 |Size: 1 |Size: 1 |
+		|inBin: 1|inBin: 1|inBin: 1|inBin: 1|inBin: 0|inBin: 0|inBin: 1|inBin: 1|inBin: 1|inBin: 1|inBin: 1|inBin: 1|inBin: 1|inBin: 0|inBin: 1|inBin: 1|
+		|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------| 
+		
+		
+		Reasoning:
+		It was decided it was much easier to handle weight values over memory addresses. In the sense that, instead of placing box nodes into bins,
+		it was simply revolved around their weights and values. This is where the box key came into play, simulating the box being within a bin.   
+		
+		Summation:
+		In summation, the bin-packing problem needs a select number of bins and boxes, in which several algorithms solve the problem by placing as many boxes
+		within as little bins as possible without going over the bin size.
+	
+</body>
